@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <title>Hide-A-Form</title>
+	<link rel="stylesheet" type="text/css" href="main.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+    <body>
+        
+  <div id="content">
+      
+<div class="container">
+    <h1>User Profile</h1>
+  	<hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+
+        <h3>Personal info</h3>
+        
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Full Name:</label>
+            <div class="col-lg-8">
+          <blockquote id='full-name-output'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+         </blockquote>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Bio:</label>
+            <div class="col-lg-8">
+          <blockquote id='bio-output'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+         </blockquote>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Favorite Books:</label>
+            <div class="col-lg-8">
+          <blockquote id='favbooks-output'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+         </blockquote>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Favorite Libraries:</label>
+            <div class="col-lg-8">
+          <blockquote id='favlibs-output'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+         </blockquote>
+            </div>
+          </div>
+
+
+
+        </form>
+      </div>
+  </div>
+</div>
+        
+    <form id="form_hide" class="form-horizontal" style="display: none">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Edit Profile</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="profile-name">Full Name</label>  
+          <div class="col-md-4">
+          <input type="text" id="profile-name" name="profile-name" class="form-control">
+            
+          </div>
+        </div>
+        
+         <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="bio">Bio</label>
+          <div class="col-md-4">                     
+            <textarea class="form-control" id="bio" name="bio"></textarea>
+          </div>
+        </div>       
+        
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="favbooks">Favorite Books</label>
+          <div class="col-md-4">                     
+            <textarea class="form-control" id="favbooks" name="favbooks"></textarea>
+          </div>
+        </div>
+        
+        <!-- Multiple Checkboxes -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="favlibs">Favorite JS Libraries</label>
+          <div class="col-md-4">
+          <div class="checkbox">
+            <label for="favlibs-0">
+              <input type="checkbox" name="favlibs" id="favlibs-0" value="1">
+              AngularJS
+            </label>
+        	</div>
+          <div class="checkbox">
+            <label for="favlibs-1">
+              <input type="checkbox" name="favlibs" id="favlibs-1" value="2">
+              React
+            </label>
+        	</div>
+          <div class="checkbox">
+            <label for="favlibs-2">
+              <input type="checkbox" name="favlibs" id="favlibs-2" value="">
+              Node.js
+            </label>
+        	</div>
+          <div class="checkbox">
+            <label for="favlibs-3">
+              <input type="checkbox" name="favlibs" id="favlibs-3" value="">
+              jQuery
+            </label>
+        	</div>
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="butSave"></label>
+          <div class="col-md-4">
+            <button type"button" id="butSave" name="butSave" class="btn btn-primary" onclick="form_hide(1); return false">Save</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>        
+    
+        <button id="butHide" onclick="form_hide(1)" style="visibility: hidden">Hide Form</button>
+        <button id="butShow" onclick="form_hide(2)">Show Form</button>
+        
+    </div>
+    
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
